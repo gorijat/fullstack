@@ -1,0 +1,24 @@
+1 Cas:
+Instalirao express, nodemon i podesio express u server.js (Primer ispod:).
+const express = require('express');
+const app = express();
+
+app.set("view engine","ejs");
+
+app.get("/",(req,res)=>{
+    res.send("Ok")
+})
+
+app.listen(3000,function () {
+    console.log("Listening on port 3000");
+})
+U terminalu napravio 
+bazu fullstack i napravio jedan objekat da se vidi, to je admin maxim gajic i sve podigao na github
+(primer kako se pravi rep.: git init pa napravimo na gitu repozitorijum, pa kopiramo 
+link na terminal. pa ide git add . pa ide git commit pa git push -u origin master)
+-za frontend instalirali smo login_register file i podigli react pomocu
+ npx create-react-app .
+-Zatim sam povezao front sa back-om tako sto ulazimo u package-json od fronta
+ i ispod "private" kreiramo "proxy":"http://localhost:3000" jer na ovaj port slusa nas back
+ u server js. Zatim importujemo axios i podesavao u app.js sa useEffect
+ jer tako saljemo zahtev ka serveru 
