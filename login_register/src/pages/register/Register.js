@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthService from "../../services/Auth-servis";
+import Navbar from "../../components/navbar/Navbar";
 
 function Register() {
 
@@ -20,6 +21,8 @@ function Register() {
     }
 
     return(
+        <>
+        <Navbar />
         <div className="container">
             <h1>Register Page</h1>
             <div className="col-6 offset-3">
@@ -30,6 +33,8 @@ function Register() {
                 <button onClick={onRegister} className="btn btn-primary form-control">Press for registration</button>
             </div>
         </div>
+        </>
+        
         
     )
 }
